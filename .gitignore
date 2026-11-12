@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# local agent notes (private, not for public repo)
+.workbuddy/
+
+# runtime artifacts: heap snapshots, source maps, analysis reports (~1.1 GB)
+out/
+*.heapsnapshot
+*.partial
+
+# build / backup artifacts
+node_modules/
+*.zip
+*.tgz
+*.log

@@ -1,0 +1,31 @@
+{
+  "name": "heapscope",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Zero-instrumentation JS heap leak analyzer for React Native 0.81+ (Hermes / CDP / Metro / watchman / dev source map)",
+  "main": "src/index.js",
+  "bin": {
+    "heapscope": "bin/heapscope.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "public/",
+    "test/"
+  ],
+  "scripts": {
+    "help": "node bin/heapscope.js --help",
+    "devices": "node bin/heapscope.js devices",
+    "capture": "node bin/heapscope.js capture",
+    "selftest": "node bin/heapscope.js selftest",
+    "test": "node bin/heapscope.js selftest && node test/integration.js && node test/regression.js && node test/ai.js && node test/deep.js && node test/ai-timeout.js && node test/ai-models.js",
+    "test:models": "node test/ai-models.js",
+    "mock": "node test/mock-metro.js",
+    "pack": "npm pack --pack-destination out",
+    "serve": "node bin/heapscope.js serve"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}
